@@ -12,7 +12,7 @@ namespace MauiAppMinhasCompras.Helpers
                         _conn = new SQLiteAsyncConnection(path);
             _conn.CreateTableAsync<Produto>().Wait();
         }
-        public Task<int> Isert(Produto p)
+        public Task<int> Insert(Produto p)
         {
                         return _conn.InsertAsync(p);
         }
